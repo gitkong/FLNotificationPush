@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1128BECD1D823BC3007D61BE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BECC1D823BC3007D61BE /* main.m */; };
+		1128BED01D823BC3007D61BE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BECF1D823BC3007D61BE /* AppDelegate.m */; };
+		1128BED31D823BC3007D61BE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BED21D823BC3007D61BE /* ViewController.m */; };
+		1128BED61D823BC3007D61BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1128BED41D823BC3007D61BE /* Main.storyboard */; };
+		1128BED81D823BC3007D61BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1128BED71D823BC3007D61BE /* Assets.xcassets */; };
+		1128BEDB1D823BC3007D61BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1128BED91D823BC3007D61BE /* LaunchScreen.storyboard */; };
+		1128BEE61D823BC3007D61BE /* FLRemotePushManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BEE51D823BC3007D61BE /* FLRemotePushManagerTests.m */; };
+		1128BEF11D823BC3007D61BE /* FLRemotePushManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BEF01D823BC3007D61BE /* FLRemotePushManagerUITests.m */; };
+		1128BF001D823C62007D61BE /* FLRemotePushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BEFF1D823C62007D61BE /* FLRemotePushManager.m */; };
+		1128BF031D8243CA007D61BE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BF021D8243CA007D61BE /* SecondViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1128BEE21D823BC3007D61BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1128BEC01D823BC3007D61BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1128BEC71D823BC3007D61BE;
+			remoteInfo = FLRemotePushManager;
+		};
+		1128BEED1D823BC3007D61BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1128BEC01D823BC3007D61BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1128BEC71D823BC3007D61BE;
+			remoteInfo = FLRemotePushManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1128BEC81D823BC3007D61BE /* FLRemotePushManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FLRemotePushManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1128BECC1D823BC3007D61BE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1128BECE1D823BC3007D61BE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1128BECF1D823BC3007D61BE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1128BED11D823BC3007D61BE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1128BED21D823BC3007D61BE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1128BED51D823BC3007D61BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1128BED71D823BC3007D61BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1128BEDA1D823BC3007D61BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1128BEDC1D823BC3007D61BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1128BEE11D823BC3007D61BE /* FLRemotePushManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLRemotePushManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1128BEE51D823BC3007D61BE /* FLRemotePushManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLRemotePushManagerTests.m; sourceTree = "<group>"; };
+		1128BEE71D823BC3007D61BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1128BEEC1D823BC3007D61BE /* FLRemotePushManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FLRemotePushManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1128BEF01D823BC3007D61BE /* FLRemotePushManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FLRemotePushManagerUITests.m; sourceTree = "<group>"; };
+		1128BEF21D823BC3007D61BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1128BEFE1D823C62007D61BE /* FLRemotePushManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLRemotePushManager.h; sourceTree = "<group>"; };
+		1128BEFF1D823C62007D61BE /* FLRemotePushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLRemotePushManager.m; sourceTree = "<group>"; };
+		1128BF011D8243CA007D61BE /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		1128BF021D8243CA007D61BE /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1128BEC51D823BC3007D61BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1128BEDE1D823BC3007D61BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1128BEE91D823BC3007D61BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1128BEBF1D823BC3007D61BE = {
+			isa = PBXGroup;
+			children = (
+				1128BECA1D823BC3007D61BE /* FLRemotePushManager */,
+				1128BEE41D823BC3007D61BE /* FLRemotePushManagerTests */,
+				1128BEEF1D823BC3007D61BE /* FLRemotePushManagerUITests */,
+				1128BEC91D823BC3007D61BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1128BEC91D823BC3007D61BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1128BEC81D823BC3007D61BE /* FLRemotePushManager.app */,
+				1128BEE11D823BC3007D61BE /* FLRemotePushManagerTests.xctest */,
+				1128BEEC1D823BC3007D61BE /* FLRemotePushManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1128BECA1D823BC3007D61BE /* FLRemotePushManager */ = {
+			isa = PBXGroup;
+			children = (
+				1128BECE1D823BC3007D61BE /* AppDelegate.h */,
+				1128BECF1D823BC3007D61BE /* AppDelegate.m */,
+				1128BED11D823BC3007D61BE /* ViewController.h */,
+				1128BED21D823BC3007D61BE /* ViewController.m */,
+				1128BF011D8243CA007D61BE /* SecondViewController.h */,
+				1128BF021D8243CA007D61BE /* SecondViewController.m */,
+				1128BEFE1D823C62007D61BE /* FLRemotePushManager.h */,
+				1128BEFF1D823C62007D61BE /* FLRemotePushManager.m */,
+				1128BED41D823BC3007D61BE /* Main.storyboard */,
+				1128BED71D823BC3007D61BE /* Assets.xcassets */,
+				1128BED91D823BC3007D61BE /* LaunchScreen.storyboard */,
+				1128BEDC1D823BC3007D61BE /* Info.plist */,
+				1128BECB1D823BC3007D61BE /* Supporting Files */,
+			);
+			path = FLRemotePushManager;
+			sourceTree = "<group>";
+		};
+		1128BECB1D823BC3007D61BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1128BECC1D823BC3007D61BE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1128BEE41D823BC3007D61BE /* FLRemotePushManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				1128BEE51D823BC3007D61BE /* FLRemotePushManagerTests.m */,
+				1128BEE71D823BC3007D61BE /* Info.plist */,
+			);
+			path = FLRemotePushManagerTests;
+			sourceTree = "<group>";
+		};
+		1128BEEF1D823BC3007D61BE /* FLRemotePushManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1128BEF01D823BC3007D61BE /* FLRemotePushManagerUITests.m */,
+				1128BEF21D823BC3007D61BE /* Info.plist */,
+			);
+			path = FLRemotePushManagerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1128BEC71D823BC3007D61BE /* FLRemotePushManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1128BEF51D823BC3007D61BE /* Build configuration list for PBXNativeTarget "FLRemotePushManager" */;
+			buildPhases = (
+				1128BEC41D823BC3007D61BE /* Sources */,
+				1128BEC51D823BC3007D61BE /* Frameworks */,
+				1128BEC61D823BC3007D61BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FLRemotePushManager;
+			productName = FLRemotePushManager;
+			productReference = 1128BEC81D823BC3007D61BE /* FLRemotePushManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1128BEE01D823BC3007D61BE /* FLRemotePushManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1128BEF81D823BC3007D61BE /* Build configuration list for PBXNativeTarget "FLRemotePushManagerTests" */;
+			buildPhases = (
+				1128BEDD1D823BC3007D61BE /* Sources */,
+				1128BEDE1D823BC3007D61BE /* Frameworks */,
+				1128BEDF1D823BC3007D61BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1128BEE31D823BC3007D61BE /* PBXTargetDependency */,
+			);
+			name = FLRemotePushManagerTests;
+			productName = FLRemotePushManagerTests;
+			productReference = 1128BEE11D823BC3007D61BE /* FLRemotePushManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1128BEEB1D823BC3007D61BE /* FLRemotePushManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1128BEFB1D823BC3007D61BE /* Build configuration list for PBXNativeTarget "FLRemotePushManagerUITests" */;
+			buildPhases = (
+				1128BEE81D823BC3007D61BE /* Sources */,
+				1128BEE91D823BC3007D61BE /* Frameworks */,
+				1128BEEA1D823BC3007D61BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1128BEEE1D823BC3007D61BE /* PBXTargetDependency */,
+			);
+			name = FLRemotePushManagerUITests;
+			productName = FLRemotePushManagerUITests;
+			productReference = 1128BEEC1D823BC3007D61BE /* FLRemotePushManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1128BEC01D823BC3007D61BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = clarence;
+				TargetAttributes = {
+					1128BEC71D823BC3007D61BE = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					1128BEE01D823BC3007D61BE = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 1128BEC71D823BC3007D61BE;
+					};
+					1128BEEB1D823BC3007D61BE = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 1128BEC71D823BC3007D61BE;
+					};
+				};
+			};
+			buildConfigurationList = 1128BEC31D823BC3007D61BE /* Build configuration list for PBXProject "FLRemotePushManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1128BEBF1D823BC3007D61BE;
+			productRefGroup = 1128BEC91D823BC3007D61BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1128BEC71D823BC3007D61BE /* FLRemotePushManager */,
+				1128BEE01D823BC3007D61BE /* FLRemotePushManagerTests */,
+				1128BEEB1D823BC3007D61BE /* FLRemotePushManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1128BEC61D823BC3007D61BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1128BEDB1D823BC3007D61BE /* LaunchScreen.storyboard in Resources */,
+				1128BED81D823BC3007D61BE /* Assets.xcassets in Resources */,
+				1128BED61D823BC3007D61BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1128BEDF1D823BC3007D61BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1128BEEA1D823BC3007D61BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1128BEC41D823BC3007D61BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1128BF031D8243CA007D61BE /* SecondViewController.m in Sources */,
+				1128BED31D823BC3007D61BE /* ViewController.m in Sources */,
+				1128BF001D823C62007D61BE /* FLRemotePushManager.m in Sources */,
+				1128BED01D823BC3007D61BE /* AppDelegate.m in Sources */,
+				1128BECD1D823BC3007D61BE /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1128BEDD1D823BC3007D61BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1128BEE61D823BC3007D61BE /* FLRemotePushManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1128BEE81D823BC3007D61BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1128BEF11D823BC3007D61BE /* FLRemotePushManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1128BEE31D823BC3007D61BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1128BEC71D823BC3007D61BE /* FLRemotePushManager */;
+			targetProxy = 1128BEE21D823BC3007D61BE /* PBXContainerItemProxy */;
+		};
+		1128BEEE1D823BC3007D61BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1128BEC71D823BC3007D61BE /* FLRemotePushManager */;
+			targetProxy = 1128BEED1D823BC3007D61BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1128BED41D823BC3007D61BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1128BED51D823BC3007D61BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1128BED91D823BC3007D61BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1128BEDA1D823BC3007D61BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1128BEF31D823BC3007D61BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1128BEF41D823BC3007D61BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1128BEF61D823BC3007D61BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FLRemotePushManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLRemotePushManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1128BEF71D823BC3007D61BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FLRemotePushManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLRemotePushManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1128BEF91D823BC3007D61BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FLRemotePushManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLRemotePushManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLRemotePushManager.app/FLRemotePushManager";
+			};
+			name = Debug;
+		};
+		1128BEFA1D823BC3007D61BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FLRemotePushManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLRemotePushManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FLRemotePushManager.app/FLRemotePushManager";
+			};
+			name = Release;
+		};
+		1128BEFC1D823BC3007D61BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FLRemotePushManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLRemotePushManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FLRemotePushManager;
+			};
+			name = Debug;
+		};
+		1128BEFD1D823BC3007D61BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FLRemotePushManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = clarence.FLRemotePushManagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FLRemotePushManager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1128BEC31D823BC3007D61BE /* Build configuration list for PBXProject "FLRemotePushManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1128BEF31D823BC3007D61BE /* Debug */,
+				1128BEF41D823BC3007D61BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1128BEF51D823BC3007D61BE /* Build configuration list for PBXNativeTarget "FLRemotePushManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1128BEF61D823BC3007D61BE /* Debug */,
+				1128BEF71D823BC3007D61BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1128BEF81D823BC3007D61BE /* Build configuration list for PBXNativeTarget "FLRemotePushManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1128BEF91D823BC3007D61BE /* Debug */,
+				1128BEFA1D823BC3007D61BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1128BEFB1D823BC3007D61BE /* Build configuration list for PBXNativeTarget "FLRemotePushManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1128BEFC1D823BC3007D61BE /* Debug */,
+				1128BEFD1D823BC3007D61BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1128BEC01D823BC3007D61BE /* Project object */;
+}
