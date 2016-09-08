@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "FLRemotePushManager.h"
+#import "FLSecondVcRemoteModel.h"
+#import "FLThirdVcRemoteModel.h"
 @interface AppDelegate ()
 
 @end
@@ -17,21 +19,36 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self test];
+        [self pushSecond];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self pushThird];
+        });
     });
     return YES;
 }
 
-- (void)test
+- (void)pushSecond
 {
-    // 这个规则肯定事先跟服务端沟通好，跳转对应的界面需要对应的参数
+    // 跟服务端沟通好跳转对应的界面需要对应的参数以及格式
     NSDictionary *userInfo = @{
                                @"className": @"SecondViewController",
-                               @"id": @"123",
-                               @"content": @"12"
+                               @"id": @"12",
+                               @"content": @"测试推送内容消息"
                                };
     
-    [[FLRemotePushManager fl_shareInstance] fl_pushWithPushModel:[FLRemotePushModel fl_remotePushModel:userInfo]];
+    [[FLRemotePushManager fl_shareInstance] fl_pushWithRemotePushModel:[FLSecondVcRemoteModel fl_remotePushModel:userInfo]];
+}
+
+- (void)pushThird{
+    NSDictionary *userInfo = @{
+                               @"className": @"ThirdViewController",
+                               @"msg"      : @{
+                                    @"name": @"clarence",
+                                     @"age": @12
+                                             }
+                               };
+    
+    [[FLRemotePushManager fl_shareInstance] fl_pushWithRemotePushModel:[FLThirdVcRemoteModel fl_remotePushModel:userInfo]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

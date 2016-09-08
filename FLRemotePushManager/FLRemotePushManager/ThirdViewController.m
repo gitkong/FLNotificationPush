@@ -1,24 +1,24 @@
 //
-//  SecondViewController.m
+//  ThirdViewController.m
 //  FLRemotePushManager
 //
-//  Created by clarence on 16/9/9.
+//  Created by 孔凡列 on 16/9/8.
 //  Copyright © 2016年 clarence. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "ThirdViewController.h"
 
-@interface SecondViewController ()
+@interface ThirdViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation ThirdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    NSLog(@"id = %@,content = %@",self.id,self.content);
-    self.title = [NSString stringWithFormat:@"%@%@",self.id,self.content];
+    NSLog(@"name = %@ age = %@",self.name,self.age);
+    self.title = [NSString stringWithFormat:@"%@%@",self.name,self.age];
 }
 
 - (void)didReceiveMemoryWarning {

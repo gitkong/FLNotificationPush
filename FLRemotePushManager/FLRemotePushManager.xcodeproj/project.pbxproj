@@ -17,6 +17,9 @@
 		1128BEF11D823BC3007D61BE /* FLRemotePushManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BEF01D823BC3007D61BE /* FLRemotePushManagerUITests.m */; };
 		1128BF001D823C62007D61BE /* FLRemotePushManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BEFF1D823C62007D61BE /* FLRemotePushManager.m */; };
 		1128BF031D8243CA007D61BE /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1128BF021D8243CA007D61BE /* SecondViewController.m */; };
+		3F1B29821D819C8600FD3E97 /* FLSecondVcRemoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B29811D819C8600FD3E97 /* FLSecondVcRemoteModel.m */; };
+		3F1B29851D819D1000FD3E97 /* FLThirdVcRemoteModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B29841D819D1000FD3E97 /* FLThirdVcRemoteModel.m */; };
+		3F1B29881D819DE700FD3E97 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F1B29871D819DE700FD3E97 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,12 @@
 		1128BEFF1D823C62007D61BE /* FLRemotePushManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLRemotePushManager.m; sourceTree = "<group>"; };
 		1128BF011D8243CA007D61BE /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		1128BF021D8243CA007D61BE /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3F1B29801D819C8600FD3E97 /* FLSecondVcRemoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLSecondVcRemoteModel.h; sourceTree = "<group>"; };
+		3F1B29811D819C8600FD3E97 /* FLSecondVcRemoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLSecondVcRemoteModel.m; sourceTree = "<group>"; };
+		3F1B29831D819D1000FD3E97 /* FLThirdVcRemoteModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLThirdVcRemoteModel.h; sourceTree = "<group>"; };
+		3F1B29841D819D1000FD3E97 /* FLThirdVcRemoteModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FLThirdVcRemoteModel.m; sourceTree = "<group>"; };
+		3F1B29861D819DE700FD3E97 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		3F1B29871D819DE700FD3E97 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +116,14 @@
 		1128BECA1D823BC3007D61BE /* FLRemotePushManager */ = {
 			isa = PBXGroup;
 			children = (
+				1128BEFE1D823C62007D61BE /* FLRemotePushManager.h */,
+				1128BEFF1D823C62007D61BE /* FLRemotePushManager.m */,
 				1128BECE1D823BC3007D61BE /* AppDelegate.h */,
 				1128BECF1D823BC3007D61BE /* AppDelegate.m */,
 				1128BED11D823BC3007D61BE /* ViewController.h */,
 				1128BED21D823BC3007D61BE /* ViewController.m */,
-				1128BF011D8243CA007D61BE /* SecondViewController.h */,
-				1128BF021D8243CA007D61BE /* SecondViewController.m */,
-				1128BEFE1D823C62007D61BE /* FLRemotePushManager.h */,
-				1128BEFF1D823C62007D61BE /* FLRemotePushManager.m */,
+				3F1B29891D81AAD600FD3E97 /* SecondViewController */,
+				3F1B298A1D81AAE500FD3E97 /* ThirdViewController */,
 				1128BED41D823BC3007D61BE /* Main.storyboard */,
 				1128BED71D823BC3007D61BE /* Assets.xcassets */,
 				1128BED91D823BC3007D61BE /* LaunchScreen.storyboard */,
@@ -148,6 +157,28 @@
 				1128BEF21D823BC3007D61BE /* Info.plist */,
 			);
 			path = FLRemotePushManagerUITests;
+			sourceTree = "<group>";
+		};
+		3F1B29891D81AAD600FD3E97 /* SecondViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1128BF011D8243CA007D61BE /* SecondViewController.h */,
+				1128BF021D8243CA007D61BE /* SecondViewController.m */,
+				3F1B29801D819C8600FD3E97 /* FLSecondVcRemoteModel.h */,
+				3F1B29811D819C8600FD3E97 /* FLSecondVcRemoteModel.m */,
+			);
+			name = SecondViewController;
+			sourceTree = "<group>";
+		};
+		3F1B298A1D81AAE500FD3E97 /* ThirdViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F1B29861D819DE700FD3E97 /* ThirdViewController.h */,
+				3F1B29871D819DE700FD3E97 /* ThirdViewController.m */,
+				3F1B29831D819D1000FD3E97 /* FLThirdVcRemoteModel.h */,
+				3F1B29841D819D1000FD3E97 /* FLThirdVcRemoteModel.m */,
+			);
+			name = ThirdViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,11 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1B29821D819C8600FD3E97 /* FLSecondVcRemoteModel.m in Sources */,
 				1128BF031D8243CA007D61BE /* SecondViewController.m in Sources */,
+				3F1B29881D819DE700FD3E97 /* ThirdViewController.m in Sources */,
 				1128BED31D823BC3007D61BE /* ViewController.m in Sources */,
 				1128BF001D823C62007D61BE /* FLRemotePushManager.m in Sources */,
 				1128BED01D823BC3007D61BE /* AppDelegate.m in Sources */,
 				1128BECD1D823BC3007D61BE /* main.m in Sources */,
+				3F1B29851D819D1000FD3E97 /* FLThirdVcRemoteModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +542,7 @@
 				1128BEF71D823BC3007D61BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1128BEF81D823BC3007D61BE /* Build configuration list for PBXNativeTarget "FLRemotePushManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +551,7 @@
 				1128BEFA1D823BC3007D61BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1128BEFB1D823BC3007D61BE /* Build configuration list for PBXNativeTarget "FLRemotePushManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +560,7 @@
 				1128BEFD1D823BC3007D61BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

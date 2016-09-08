@@ -1,10 +1,13 @@
-//
-//  FLRemotePushManager.m
-//  FLRemotePushManager
-//
-//  Created by clarence on 16/9/9.
-//  Copyright © 2016年 clarence. All rights reserved.
-//
+/*
+ *  @author Clarence-lie 孔凡列
+ *
+ *  QQ：279761135
+ *
+ *  gitHub：https://github.com/gitkong
+ *  cocoaChina：http://code.cocoachina.com/user/index/upload/
+ *  简书 ： http://www.jianshu.com/users/fe5700cfb223/latest_articles
+ *  喜欢给个like & star呗~
+ */
 
 #import "FLRemotePushManager.h"
 #import <objc/runtime.h>
@@ -27,6 +30,66 @@
     return model;
 }
 
+#pragma mark - private method
+
+/**
+ *  @author Clarence-lie, 16-09-08 22:09:33
+ *
+ *  通过字符串来创建该字符串的getter方法
+ *
+ *  @param propertyName 属性名
+ *
+ *  @return 对应的getter方法
+ */
+- (SEL)fl_creatGetterWithPropertyName: (NSString *) propertyName{
+    //1.返回get方法: oc中的get方法就是属性的本身
+    return NSSelectorFromString(propertyName);
+}
+
+/**
+ *  @author Clarence-lie, 16-09-08 22:09:49
+ *
+ *  获取指定属性名对应的值
+ *
+ *  @param propertyName 属性名
+ *
+ *  @return 属性值
+ */
+- (id)fl_getValueByPropertyName:(NSString *)propertyName{
+    //获取get方法
+    SEL getSel = [self fl_creatGetterWithPropertyName:propertyName];
+    
+    if ([self respondsToSelector:getSel]) {
+        
+        //获得类和方法的签名
+        NSMethodSignature *signature = [self methodSignatureForSelector:getSel];
+        
+        //从签名获得调用对象
+        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+        
+        //设置target
+        [invocation setTarget:self];
+        
+        //设置selector
+        [invocation setSelector:getSel];
+        
+        //接收返回的值
+        NSObject *__unsafe_unretained returnValue = nil;
+        
+        //调用
+        [invocation invoke];
+        
+        //接收返回值
+        [invocation getReturnValue:&returnValue];
+        
+        return returnValue;
+    }
+    else{
+        return nil;
+    }
+}
+
+
 @end
 
 @implementation FLRemotePushManager
@@ -39,15 +102,21 @@
     return instance;
 }
 
-- (void)fl_pushWithPushModel:(FLRemotePushModel *)remotePushModel{
+- (void)fl_pushWithRemotePushModel:(FLRemotePushModel *)remotePushModel{
     FLRemotePushManager *manager = [FLRemotePushManager fl_shareInstance];
-    [manager push:remotePushModel];
+    [manager fl_push:remotePushModel];
 }
 
+
+#pragma mark - private method
 /**
- *  跳转界面
+ *  @author Clarence-lie, 16-09-08 22:09:04
+ *
+ *  跳转控制器
+ *
+ *  @param remotePushModel 跳转所需参数模型
  */
-- (void)push:(FLRemotePushModel *)remotePushModel{
+- (void)fl_push:(FLRemotePushModel *)remotePushModel{
     // 类名
     NSString *class = remotePushModel.className;
     const char *className = [class cStringUsingEncoding:NSASCIIStringEncoding];
@@ -68,41 +137,57 @@
     // 获取对象里的属性列表
     objc_property_t * properties = class_copyPropertyList([instance
                                                            class], &outCount);
+    // 属性名数组
     NSMutableArray *propertyArrM = [NSMutableArray array];
     for (i = 0; i < outCount; i ++) {
         objc_property_t property =properties[i];
         //  属性名转成字符串
         NSString *propertyName = [[NSString alloc] initWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
-        if (![propertyName isEqualToString:remotePushModel.className]) {
+        // className 不需要添加到里面，父类属性，肯定是第一个，除非手动更改了
+        if (![propertyName isEqualToString:propertyArrM.firstObject]) {
             [propertyArrM addObject:propertyName];
         }
+        
     }
     
     free(properties);
-    [propertyArrM enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    
+    
+    [propertyArrM enumerateObjectsUsingBlock:^(id _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         // 检测这个对象是否存在该属性
-        if ([self checkIsExistPropertyWithInstance:instance verifyPropertyName:obj]) {
-            // 利用kvc赋值
-            [instance setValue:obj forKey:obj];
+        if ([self fl_checkIsExistPropertyWithInstance:instance verifyPropertyName:obj]) {
+            // 获取属性名对应的value 利用kvc赋值
+            [instance setValue:[remotePushModel fl_getValueByPropertyName:obj] forKey:obj];
         }
     }];
     
     
-    // 获取导航控制器
-    UITabBarController *tabVC = (UITabBarController *)[UIApplication sharedApplication].keyWindow.rootViewController;
-    UINavigationController *pushClassStance = (UINavigationController *)tabVC.viewControllers[tabVC.selectedIndex];
-    
-    // 跳转到对应的控制器
-    [pushClassStance pushViewController:instance animated:YES];
+    // 跳转控制器
+    UIViewController *vc = [UIApplication sharedApplication].keyWindow.rootViewController;
+    if ([vc isKindOfClass:[UITabBarController class]]) {
+        UITabBarController *tabVc = (UITabBarController *)vc;
+        UINavigationController *nav = (UINavigationController *)tabVc.viewControllers[tabVc.selectedIndex];
+        [nav pushViewController:instance animated:YES];
+    }
+    else if ([vc isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *nav = (UINavigationController *)vc;
+        [nav pushViewController:instance animated:YES];
+    }
 }
 
 /**
+ *  @author Clarence-lie, 16-09-08 22:09:34
+ *
  *  检测对象是否存在该属性
+ *
+ *  @param instance           对象
+ *  @param verifyPropertyName 有效的属性名
+ *
+ *  @return YES OR NO
  */
-- (BOOL)checkIsExistPropertyWithInstance:(id)instance verifyPropertyName:(NSString *)verifyPropertyName
-{
-    unsigned int outCount, i;
+- (BOOL)fl_checkIsExistPropertyWithInstance:(id)instance verifyPropertyName:(NSString *)verifyPropertyName{
     
+    unsigned int outCount, i;
     // 获取对象里的属性列表
     objc_property_t * properties = class_copyPropertyList([instance
                                                            class], &outCount);
@@ -121,5 +206,6 @@
     
     return NO;
 }
+
 
 @end
